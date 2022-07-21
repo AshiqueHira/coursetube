@@ -34,6 +34,49 @@
     <section class="course-list">
         <div class="course-1">
             <div class="thumbnail">
+                <img src="https://img.youtube.com/vi/QXeEoD0pB3E/hqdefault.jpg" alt="">
+            </div>
+            <div class="description">
+                <p>Python programming</p>
+            </div>
+        </div>
+        <div class="course-1">
+            <div class="thumbnail">
+
+                <img src="https://img.youtube.com/vi/yEHCfRWz-EI/hqdefault.jpg" alt="">
+            </div>
+            <div class="description">
+                <p>Node JS</p>
+            </div>
+        </div>
+        <div class="course-1">
+            <div class="thumbnail">
+
+                <img src="https://img.youtube.com/vi/1kkvalOcSog/hqdefault.jpg" alt="">
+            </div>
+            <div class="description">
+                <p>Java programming</p>
+            </div>
+        </div>
+        <div class="course-1">
+            <div class="thumbnail">
+                <img src="https://img.youtube.com/vi/zIzufk0s_Ec/hqdefault.jpg" alt="">
+            </div>
+            <div class="description">
+                <p>Laplace Transforms</p>
+            </div>
+        </div>
+        <div class="course-1">
+            <div class="thumbnail">
+                <img src="https://img.youtube.com/vi/xJCWOJsN40o/hqdefault.jpg" alt="">
+            </div>
+            <div class="description">
+                <p>Statistical Interface</p>
+            </div>
+        </div>
+        <div class="course-1">
+            <div class="thumbnail">
+                <img src="https://img.youtube.com/vi/yEHCfRWz-EI/hqdefault.jpg" alt="">
             </div>
             <div class="description">
                 <p>python programming</p>
@@ -41,6 +84,7 @@
         </div>
         <div class="course-1">
             <div class="thumbnail">
+                <img src="https://img.youtube.com/vi/yEHCfRWz-EI/hqdefault.jpg" alt="">
             </div>
             <div class="description">
                 <p>python programming</p>
@@ -48,6 +92,7 @@
         </div>
         <div class="course-1">
             <div class="thumbnail">
+                <img src="https://img.youtube.com/vi/yEHCfRWz-EI/hqdefault.jpg" alt="">
             </div>
             <div class="description">
                 <p>python programming</p>
@@ -55,6 +100,7 @@
         </div>
         <div class="course-1">
             <div class="thumbnail">
+                <img src="https://img.youtube.com/vi/yEHCfRWz-EI/hqdefault.jpg" alt="">
             </div>
             <div class="description">
                 <p>python programming</p>
@@ -62,41 +108,7 @@
         </div>
         <div class="course-1">
             <div class="thumbnail">
-            </div>
-            <div class="description">
-                <p>python programming</p>
-            </div>
-        </div>
-        <div class="course-1">
-            <div class="thumbnail">
-            </div>
-            <div class="description">
-                <p>python programming</p>
-            </div>
-        </div>
-        <div class="course-1">
-            <div class="thumbnail">
-            </div>
-            <div class="description">
-                <p>python programming</p>
-            </div>
-        </div>
-        <div class="course-1">
-            <div class="thumbnail">
-            </div>
-            <div class="description">
-                <p>python programming</p>
-            </div>
-        </div>
-        <div class="course-1">
-            <div class="thumbnail">
-            </div>
-            <div class="description">
-                <p>python programming</p>
-            </div>
-        </div>
-        <div class="course-1">
-            <div class="thumbnail">
+                <img src="https://img.youtube.com/vi/yEHCfRWz-EI/hqdefault.jpg" alt="">
             </div>
             <div class="description">
                 <p>python programming</p>
@@ -107,8 +119,9 @@
 
     <script>
         function validateform() {
-            var name = document.querySelector('course-name').value;
-            var curl = document.querySelector('course-url').value;
+            // e.preventDefault();
+            var name = document.getElementById("course-name").value;
+            var curl = document.getElementById("course-url").value;
 
             console.log(name);
         }
@@ -116,13 +129,12 @@
 
     <div class="bg-modal">
         <div class="modal-contents">
-
             <div class="close">+</div>
 
-            <form class="myform" method="get" onsubmit="return validateform()">
-                <input type="text" id="course-name" name="course-name" placeholder="Course Name">
-                <input type="text" id="course-url" name="course-url" placeholder="URL of the playlist">
-                <input type="submit" class="popup-button" value="Submit">
+            <form class="myform" action="#" onsubmit="return validateform()">
+                <input type="text" id="course-name" name="course-name" placeholder="Course Name" />
+                <input type="text" id="course-url" name="course-url" placeholder="URL of the playlist" />
+                <input type="submit" class="popup-button" value="Submit" />
             </form>
 
         </div>
