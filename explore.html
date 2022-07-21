@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses</title>
+
+    <link href="css/explore.css" rel="stylesheet" />
+
+
+</head>
+
+<body>
+    <div class="nav-bar">
+        <a class="navbar-brand" href="index.html">
+            <span>
+                Coursetube
+            </span>
+        </a>
+
+        <a class="navbar-import" href="#" id="import-button">
+            <span>
+                Import Course
+            </span>
+        </a>
+    </div>
+    <p class="nav-description">
+        Enroll your favorate course now!!
+    </p>
+
+
+    <section class="course-list">
+        <div class="course-1">
+            <div class="thumbnail">
+            </div>
+            <div class="description">
+                <p>python programming</p>
+            </div>
+        </div>
+        <div class="course-1">
+            <div class="thumbnail">
+            </div>
+            <div class="description">
+                <p>python programming</p>
+            </div>
+        </div>
+        <div class="course-1">
+            <div class="thumbnail">
+            </div>
+            <div class="description">
+                <p>python programming</p>
+            </div>
+        </div>
+        <div class="course-1">
+            <div class="thumbnail">
+            </div>
+            <div class="description">
+                <p>python programming</p>
+            </div>
+        </div>
+        <div class="course-1">
+            <div class="thumbnail">
+            </div>
+            <div class="description">
+                <p>python programming</p>
+            </div>
+        </div>
+        <div class="course-1">
+            <div class="thumbnail">
+            </div>
+            <div class="description">
+                <p>python programming</p>
+            </div>
+        </div>
+        <div class="course-1">
+            <div class="thumbnail">
+            </div>
+            <div class="description">
+                <p>python programming</p>
+            </div>
+        </div>
+        <div class="course-1">
+            <div class="thumbnail">
+            </div>
+            <div class="description">
+                <p>python programming</p>
+            </div>
+        </div>
+        <div class="course-1">
+            <div class="thumbnail">
+            </div>
+            <div class="description">
+                <p>python programming</p>
+            </div>
+        </div>
+        <div class="course-1">
+            <div class="thumbnail">
+            </div>
+            <div class="description">
+                <p>python programming</p>
+            </div>
+        </div>
+    </section>
+
+
+    <script>
+        function validateform() {
+            var name = document.querySelector('course-name').value;
+            var curl = document.querySelector('course-url').value;
+
+            console.log(name);
+        }
+    </script>
+
+    <div class="bg-modal">
+        <div class="modal-contents">
+
+            <div class="close">+</div>
+
+            <form class="myform" method="get" onsubmit="return validateform()">
+                <input type="text" id="course-name" name="course-name" placeholder="Course Name">
+                <input type="text" id="course-url" name="course-url" placeholder="URL of the playlist">
+                <input type="submit" class="popup-button" value="Submit">
+            </form>
+
+        </div>
+    </div>
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.9.0/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.9.0/firebase-analytics.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+            apiKey: "AIzaSyCT-jG3sIps1e0v_LNUXX8oEaiui1_OV1E",
+            authDomain: "coursetube-ac134.firebaseapp.com",
+            projectId: "coursetube-ac134",
+            storageBucket: "coursetube-ac134.appspot.com",
+            messagingSenderId: "1037924647195",
+            appId: "1:1037924647195:web:b27b1e1f0c92894451d3be",
+            measurementId: "G-V0HW8SXB74"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+    </script>
+    <script src="js/explore.js"></script>
+
+</body>
+
+</html>
