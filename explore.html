@@ -1,215 +1,244 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Courses</title>
 
     <link href="css/explore.css" rel="stylesheet" />
 
     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+  </head>
 
-
-</head>
-
-<body>
-
-    <body>
-        <!-- Insert this script at the bottom of the HTML, but before you use any Firebase services -->
-        <!-- <script type="module">
-            import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.9.1/firebase-app.js'
-
-            // If you enabled Analytics in your project, add the Firebase SDK for Google Analytics
-
-
-            // Add Firebase products that you want to use
-            //import { auth } from 'https://www.gstatic.com/firebasejs/9.9.1/firebase-auth.js'
-            import { firestore } from 'https://www.gstatic.com/firebasejs/9.9.1/firebase-firestore.js'
-        </script> -->
-    </body>
+  <body>
+    <body></body>
 
     <div class="nav-bar">
-        <a class="navbar-brand" href="index.html">
-            <span>
-                Coursetube
-            </span>
-        </a>
+      <a class="navbar-brand" href="index.html">
+        <span> Coursetube </span>
+      </a>
 
-        <a class="navbar-import" href="#" id="import-button">
-            <span>
-                Import Course
-            </span>
-        </a>
+      <a class="navbar-import" href="#" id="import-button">
+        <span> Import Course </span>
+      </a>
     </div>
-    <p class="nav-description">
-        Enroll your favorate course now!!
-    </p>
-
+    <p class="nav-description">Enroll your favorate course now!!</p>
 
     <section class="course-list">
-        <div class="course-1">
-            <div class="thumbnail">
-                <a href="course.html">
-                    <img src="https://img.youtube.com/vi/QXeEoD0pB3E/hqdefault.jpg" alt="">
-                </a>
-            </div>
-            <div class="description">
-                <p>Python programming</p>
-            </div>
+      <div class="course-1">
+        <div class="thumbnail">
+          <a href="course.html">
+            <img
+              src="https://img.youtube.com/vi/QXeEoD0pB3E/hqdefault.jpg"
+              alt=""
+            />
+          </a>
         </div>
-        <div class="course-1">
-            <div class="thumbnail">
-
-                <img src="https://img.youtube.com/vi/yEHCfRWz-EI/hqdefault.jpg" alt="">
-            </div>
-            <div class="description">
-                <p>Node JS</p>
-            </div>
+        <div class="description">
+          <p>Python programming</p>
         </div>
-        <div class="course-1">
-            <div class="thumbnail">
-
-                <img src="https://img.youtube.com/vi/1kkvalOcSog/hqdefault.jpg" alt="">
-            </div>
-            <div class="description">
-                <p>Java programming</p>
-            </div>
+      </div>
+      <div class="course-1">
+        <div class="thumbnail">
+          <img
+            src="https://img.youtube.com/vi/yEHCfRWz-EI/hqdefault.jpg"
+            alt=""
+          />
         </div>
-        <div class="course-1">
-            <div class="thumbnail">
-                <img src="https://img.youtube.com/vi/zIzufk0s_Ec/hqdefault.jpg" alt="">
-            </div>
-            <div class="description">
-                <p>Laplace Transforms</p>
-            </div>
+        <div class="description">
+          <p>Node JS</p>
         </div>
-        <div class="course-1">
-            <div class="thumbnail">
-                <img src="https://img.youtube.com/vi/xJCWOJsN40o/hqdefault.jpg" alt="">
-            </div>
-            <div class="description">
-                <p>Statistical Interface</p>
-            </div>
+      </div>
+      <div class="course-1">
+        <div class="thumbnail">
+          <img
+            src="https://img.youtube.com/vi/1kkvalOcSog/hqdefault.jpg"
+            alt=""
+          />
         </div>
-        <div class="course-1">
-            <div class="thumbnail">
-                <img src="https://img.youtube.com/vi/1A_CAkYt3GY/hqdefault.jpg" alt="">
-            </div>
-            <div class="description">
-                <p>Philosophy Crash Course</p>
-            </div>
+        <div class="description">
+          <p>Java programming</p>
         </div>
-        <div class="course-1">
-            <div class="thumbnail">
-                <img src="https://img.youtube.com/vi/VZDTs4lpqUM/hqdefault.jpg" alt="">
-            </div>
-            <div class="description">
-                <p>Free Beginner Piano Tutorial</p>
-            </div>
+      </div>
+      <div class="course-1">
+        <div class="thumbnail">
+          <img
+            src="https://img.youtube.com/vi/zIzufk0s_Ec/hqdefault.jpg"
+            alt=""
+          />
         </div>
-        <div class="course-1">
-            <div class="thumbnail">
-                <img src="https://img.youtube.com/vi/rozYNIZ9ptc/hqdefault.jpg" alt="">
-            </div>
-            <div class="description">
-                <p>JEE Exam Preparation</p>
-            </div>
+        <div class="description">
+          <p>Laplace Transforms</p>
         </div>
-        <div class="course-1">
-            <div class="thumbnail">
-                <img src="https://img.youtube.com/vi/JFF2vJaN0Cw/hqdefault.jpg" alt="">
-            </div>
-            <div class="description">
-                <p>Computer Networks (Complete Playlist)</p>
-            </div>
+      </div>
+      <div class="course-1">
+        <div class="thumbnail">
+          <img
+            src="https://img.youtube.com/vi/xJCWOJsN40o/hqdefault.jpg"
+            alt=""
+          />
         </div>
-        <div class="course-1">
-            <div class="thumbnail">
-                <img src="https://img.youtube.com/vi/bPrmA1SEN2k/hqdefault.jpg" alt="">
-            </div>
-            <div class="description">
-                <p>Complete Machine Learning playlist</p>
-            </div>
+        <div class="description">
+          <p>Statistical Interface</p>
         </div>
-        <div class="course-1">
-            <div class="thumbnail">
-                <img src="https://img.youtube.com/vi/JL_grPUnXzY/hqdefault.jpg" alt="">
-            </div>
-            <div class="description">
-                <p>Data Science Full Course For Beginners</p>
-            </div>
+      </div>
+      <div class="course-1">
+        <div class="thumbnail">
+          <img
+            src="https://img.youtube.com/vi/1A_CAkYt3GY/hqdefault.jpg"
+            alt=""
+          />
         </div>
-        <div class="course-1">
-            <div class="thumbnail">
-                <img src="https://img.youtube.com/vi/RIvJvHBguHg/hqdefault.jpg" alt="">
-            </div>
-            <div class="description">
-                <p>Classical Physics</p>
-            </div>
+        <div class="description">
+          <p>Philosophy Crash Course</p>
         </div>
+      </div>
+      <div class="course-1">
+        <div class="thumbnail">
+          <img
+            src="https://img.youtube.com/vi/VZDTs4lpqUM/hqdefault.jpg"
+            alt=""
+          />
+        </div>
+        <div class="description">
+          <p>Free Beginner Piano Tutorial</p>
+        </div>
+      </div>
+      <div class="course-1">
+        <div class="thumbnail">
+          <img
+            src="https://img.youtube.com/vi/rozYNIZ9ptc/hqdefault.jpg"
+            alt=""
+          />
+        </div>
+        <div class="description">
+          <p>JEE Exam Preparation</p>
+        </div>
+      </div>
+      <div class="course-1">
+        <div class="thumbnail">
+          <img
+            src="https://img.youtube.com/vi/JFF2vJaN0Cw/hqdefault.jpg"
+            alt=""
+          />
+        </div>
+        <div class="description">
+          <p>Computer Networks (Complete Playlist)</p>
+        </div>
+      </div>
+      <div class="course-1">
+        <div class="thumbnail">
+          <img
+            src="https://img.youtube.com/vi/bPrmA1SEN2k/hqdefault.jpg"
+            alt=""
+          />
+        </div>
+        <div class="description">
+          <p>Complete Machine Learning playlist</p>
+        </div>
+      </div>
+      <div class="course-1">
+        <div class="thumbnail">
+          <img
+            src="https://img.youtube.com/vi/JL_grPUnXzY/hqdefault.jpg"
+            alt=""
+          />
+        </div>
+        <div class="description">
+          <p>Data Science Full Course For Beginners</p>
+        </div>
+      </div>
+      <div class="course-1">
+        <div class="thumbnail">
+          <img
+            src="https://img.youtube.com/vi/RIvJvHBguHg/hqdefault.jpg"
+            alt=""
+          />
+        </div>
+        <div class="description">
+          <p>Classical Physics</p>
+        </div>
+      </div>
     </section>
+    <script type="module">
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js";
+      import {
+        getFirestore,
+        setDoc,
+        addDoc,
+        doc,
+        updateDoc,
+        deleteDoc,
+        getDoc,
+        query,
+        collection,
+        where,
+        getDocs,
+        onSnapshot
+      } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore.js";
 
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
 
-    <script>
-        function validateform() {
-            // e.preventDefault();
-            var name = document.getElementById("course-name").value;
-            var curl = document.getElementById("course-url").value;
+      // Your web app's Firebase configuration
+      const firebaseConfig = {
+        apiKey: "AIzaSyCT-jG3sIps1e0v_LNUXX8oEaiui1_OV1E",
+        authDomain: "coursetube-ac134.firebaseapp.com",
+        projectId: "coursetube-ac134",
+        storageBucket: "coursetube-ac134.appspot.com",
+        messagingSenderId: "1037924647195",
+        appId: "1:1037924647195:web:b27b1e1f0c92894451d3be",
+        measurementId: "G-V0HW8SXB74"
+      };
 
-            console.log(name);
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      // Initialize Cloud Firestore and get a reference to the service
+      const db = getFirestore(app);
 
-            db.collection('jjjjj').add({ name })
-        }
+      submitData.addEventListener("click", (e) => {
+          var name = document.getElementById("course-name").value;
+          var url = document.getElementById("course-url").value;
+
+        addDoc(collection(db, "users"), {
+          name,
+          url
+        });
+
+        alert("User added");
+      });
     </script>
 
     <div class="bg-modal">
-        <div class="modal-contents">
-            <div class="close">+</div>
+      <div class="modal-contents">
+        <div class="close">+</div>
 
-            <form class="myform" action="#" onsubmit="return validateform()">
-                <input type="text" id="course-name" name="course-name" placeholder="Course Name" />
-                <input type="text" id="course-url" name="course-url" placeholder="URL of the playlist" />
-                <input type="submit" class="popup-button" value="Submit" />
-            </form>
-
-        </div>
+        <form class="myform" action="#">
+          <input
+            type="text"
+            id="course-name"
+            name="course-name"
+            placeholder="Course Name"
+          />
+          <input
+            type="text"
+            id="course-url"
+            name="course-url"
+            placeholder="URL of the playlist"
+          />
+          <input
+            type="button"
+            id="submitData"
+            name="submitData"
+            class="popup-button"
+            value="Submit"
+          />
+        </form>
+      </div>
     </div>
-    <script type="module">
 
-        // import firebase from "firebase/app";
-        // import "firebase/firestore";
-
-        // TODO: Replace the following with your app's Firebase project configuration
-        // See: https://firebase.google.com/docs/web/learn-more#config-object
-        try {
-            const firebaseConfig = {
-                apiKey: "AIzaSyCT-jG3sIps1e0v_LNUXX8oEaiui1_OV1E",
-                authDomain: "coursetube-ac134.firebaseapp.com",
-                projectId: "coursetube-ac134",
-                storageBucket: "coursetube-ac134.appspot.com",
-                messagingSenderId: "1037924647195",
-                appId: "1:1037924647195:web:b27b1e1f0c92894451d3be",
-                measurementId: "G-V0HW8SXB74"
-            };
-
-            // Initialize Firebase
-            firebase.initializeApp(firebaseConfig);
-
-
-            // Initialize Cloud Firestore and get a reference to the service
-            const db = firebase.firestore();
-            // Import the functions you need from the SDKs you need
-        } catch (error) {
-            console.log(error);
-        }
-
-
-    </script>
     <script src="js/explore.js"></script>
-
-</body>
-
+  </body>
 </html>
