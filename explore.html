@@ -26,142 +26,7 @@
     </div>
     <p class="nav-description">Enroll your favorate course now!!</p>
 
-    <section class="course-list">
-      <div class="course-1">
-        <div class="thumbnail">
-          <a href="course.html">
-            <img
-              src="https://img.youtube.com/vi/QXeEoD0pB3E/hqdefault.jpg"
-              alt=""
-            />
-          </a>
-        </div>
-        <div class="description">
-          <p>Python programming</p>
-        </div>
-      </div>
-      <div class="course-1">
-        <div class="thumbnail">
-          <img
-            src="https://img.youtube.com/vi/yEHCfRWz-EI/hqdefault.jpg"
-            alt=""
-          />
-        </div>
-        <div class="description">
-          <p>Node JS</p>
-        </div>
-      </div>
-      <div class="course-1">
-        <div class="thumbnail">
-          <img
-            src="https://img.youtube.com/vi/1kkvalOcSog/hqdefault.jpg"
-            alt=""
-          />
-        </div>
-        <div class="description">
-          <p>Java programming</p>
-        </div>
-      </div>
-      <div class="course-1">
-        <div class="thumbnail">
-          <img
-            src="https://img.youtube.com/vi/zIzufk0s_Ec/hqdefault.jpg"
-            alt=""
-          />
-        </div>
-        <div class="description">
-          <p>Laplace Transforms</p>
-        </div>
-      </div>
-      <div class="course-1">
-        <div class="thumbnail">
-          <img
-            src="https://img.youtube.com/vi/xJCWOJsN40o/hqdefault.jpg"
-            alt=""
-          />
-        </div>
-        <div class="description">
-          <p>Statistical Interface</p>
-        </div>
-      </div>
-      <div class="course-1">
-        <div class="thumbnail">
-          <img
-            src="https://img.youtube.com/vi/1A_CAkYt3GY/hqdefault.jpg"
-            alt=""
-          />
-        </div>
-        <div class="description">
-          <p>Philosophy Crash Course</p>
-        </div>
-      </div>
-      <div class="course-1">
-        <div class="thumbnail">
-          <img
-            src="https://img.youtube.com/vi/VZDTs4lpqUM/hqdefault.jpg"
-            alt=""
-          />
-        </div>
-        <div class="description">
-          <p>Free Beginner Piano Tutorial</p>
-        </div>
-      </div>
-      <div class="course-1">
-        <div class="thumbnail">
-          <img
-            src="https://img.youtube.com/vi/rozYNIZ9ptc/hqdefault.jpg"
-            alt=""
-          />
-        </div>
-        <div class="description">
-          <p>JEE Exam Preparation</p>
-        </div>
-      </div>
-      <div class="course-1">
-        <div class="thumbnail">
-          <img
-            src="https://img.youtube.com/vi/JFF2vJaN0Cw/hqdefault.jpg"
-            alt=""
-          />
-        </div>
-        <div class="description">
-          <p>Computer Networks (Complete Playlist)</p>
-        </div>
-      </div>
-      <div class="course-1">
-        <div class="thumbnail">
-          <img
-            src="https://img.youtube.com/vi/bPrmA1SEN2k/hqdefault.jpg"
-            alt=""
-          />
-        </div>
-        <div class="description">
-          <p>Complete Machine Learning playlist</p>
-        </div>
-      </div>
-      <div class="course-1">
-        <div class="thumbnail">
-          <img
-            src="https://img.youtube.com/vi/JL_grPUnXzY/hqdefault.jpg"
-            alt=""
-          />
-        </div>
-        <div class="description">
-          <p>Data Science Full Course For Beginners</p>
-        </div>
-      </div>
-      <div class="course-1">
-        <div class="thumbnail">
-          <img
-            src="https://img.youtube.com/vi/RIvJvHBguHg/hqdefault.jpg"
-            alt=""
-          />
-        </div>
-        <div class="description">
-          <p>Classical Physics</p>
-        </div>
-      </div>
-    </section>
+    <div class="course-list" id="course-list"></div>
     <script type="module">
       import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js";
       import {
@@ -205,6 +70,7 @@
         let code = url.split("=")[2];
         let img = url.split("=")[1].split("&")[0];
         console.log(code);
+
         addDoc(collection(db, "users"), {
           name,
           url: code,
@@ -214,6 +80,58 @@
 
         alert("User added");
       });
+
+      //   getAllData.addEventListener('click', (e) => {
+
+      // });
+
+      async function getAllData() {
+        await getDocs(collection(db, "users")).then((docSnap) => {
+          let users = [];
+          docSnap.forEach((doc) => {
+            users.push({ ...doc.data(), id: doc.id });
+          });
+          console.log("Document data:", users);
+          let listDiv = document.getElementById("course-list");
+          var nHTML = "";
+
+          users.forEach((item, id) => {
+            nHTML += `
+             <div class="course-1">
+         <div
+      id='course-item_${id}'
+
+              class="thumbnail">
+         
+             <img
+               src="https://img.youtube.com/vi/${item.img}/hqdefault.jpg"
+               alt=""
+             />
+         
+         </div>
+         <div class="description">
+           <p>${item.name}</p>
+         </div>
+       </div>`;
+
+            // let li = document.createElement("li");
+            // li.innerText = item;
+            // listDiv.appendChild(li);
+          });
+
+          document.getElementById("course-list").innerHTML = nHTML;
+
+          users.forEach((item, id) => {
+            document
+              .getElementById(`course-item_${id}`)
+              .addEventListener("click", (e) => {
+                localStorage.setItem("video", JSON.stringify(item));
+                window.location = "course.html"
+              });
+          });
+        });
+      }
+      getAllData();
     </script>
 
     <div class="bg-modal">
