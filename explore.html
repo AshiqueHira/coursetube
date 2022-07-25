@@ -199,12 +199,17 @@
       const db = getFirestore(app);
 
       submitData.addEventListener("click", (e) => {
-          var name = document.getElementById("course-name").value;
-          var url = document.getElementById("course-url").value;
+        var name = document.getElementById("course-name").value;
+        var url = document.getElementById("course-url").value;
 
+        let code = url.split("=")[2];
+        let img = url.split("=")[1].split("&")[0];
+        console.log(code);
         addDoc(collection(db, "users"), {
           name,
-          url
+          url: code,
+          img,
+          isVerified: false
         });
 
         alert("User added");
