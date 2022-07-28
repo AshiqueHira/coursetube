@@ -83,7 +83,7 @@
 
         console.log(code);
 
-        addDoc(collection(db, "users"), {
+        addDoc(collection(db, "Courses"), {
           name,
           url: code,
           img,
@@ -99,7 +99,7 @@
       // });
 
       const approveHandler = async (id, value) => {
-        const washingtonRef = doc(db, "users", id);
+        const washingtonRef = doc(db, "Courses", id);
 
         // Set the "capital" field of the city 'DC'
         await updateDoc(washingtonRef, {
@@ -109,12 +109,12 @@
       };
 
       const deleteHandler = async (id) => {
-        await deleteDoc(doc(db, "users", id));
+        await deleteDoc(doc(db, "Courses", id));
         location.reload();
       };
 
       async function getAllData() {
-        await getDocs(collection(db, "users")).then((docSnap) => {
+        await getDocs(collection(db, "Courses")).then((docSnap) => {
           let users = [];
           docSnap.forEach((doc) => {
             users.push({ ...doc.data(), id: doc.id });

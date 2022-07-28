@@ -83,7 +83,7 @@
 
         console.log(code);
 
-        addDoc(collection(db, "users"), {
+        addDoc(collection(db, "Courses"), {
           name,
           url: code,
           img,
@@ -99,7 +99,7 @@
       // });
 
       async function getAllData() {
-        await getDocs(collection(db, "users")).then((docSnap) => {
+        await getDocs(collection(db, "Courses")).then((docSnap) => {
           let users = [];
           docSnap.forEach((doc) => {
             if (doc.data().isVerified) {
