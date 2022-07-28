@@ -8,6 +8,10 @@
   <title>Courses</title>
 
   <link href="css/explore.css" rel="stylesheet" />
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,700|Raleway:400,600&display=swap" rel="stylesheet">
+  <!-- font wesome stylesheet -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
   <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
@@ -68,19 +72,22 @@
     submitData.addEventListener("click", (e) => {
       var name = document.getElementById("course-name").value;
       var url = document.getElementById("course-url").value;
+      var channelName = document.getElementById("channel-name").value;
 
       let code = url.split("=")[2];
       let img = url.split("=")[1].split("&")[0];
+
       console.log(code);
 
       addDoc(collection(db, "users"), {
         name,
         url: code,
         img,
+        channelName,
         isVerified: false
       });
 
-      alert("User added");
+      document.querySelector('.bg-modal').style.display = "none";
     });
 
     //   getAllData.addEventListener('click', (e) => {
@@ -113,6 +120,7 @@
          </div>
          <div class="description">
            <p>${item.name}</p>
+           <p>${item.channelName}</p>
          </div>
        </div>`;
 
@@ -141,8 +149,10 @@
       <div class="close">+</div>
 
       <form class="myform" action="#">
-        <input type="text" id="course-name" name="course-name" placeholder="Course Name" />
+        <input type="text" id="course-name" name="course-name" placeholder="Course name" />
+        <input type="text" id="channel-name" name="channel-name" placeholder="Channel name or Instructor name" />
         <input type="text" id="course-url" name="course-url" placeholder="URL of the playlist" />
+
         <input type="button" id="submitData" name="submitData" class="popup-button" value="Submit" />
       </form>
     </div>

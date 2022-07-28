@@ -47,20 +47,65 @@ body {
     margin-right: 5%;
 }
 
-.course-1 p {
-    text-align: center;
+.course-1 {
+    height: 350px;
+    width: 300px;
+    border: 0.5px solid #bbbbbb;
+    border-radius: 5px;
+    display: block;
+    flex-direction: column;
+    justify-content: center;
+    padding: 15px;
+    margin-top: 10px;
+    object-fit: contain;
 }
 
+
 .thumbnail {
-    height: 200px;
-    width: 250px;
-    background-color: #fdd31d;
+    width: 100%;
+    /* or any custom size */
+    object-fit: contain;
 }
 
 .thumbnail img {
-    height: 200px;
-    width: 250px;
+    width: 100%;
+    /* or any custom size */
+    height: auto;
+    object-fit: contain;
 }
+
+.description {
+    display: block;
+    text-align: left;
+}
+
+.description :nth-child(1) {
+    font-family: sans-serif;
+    font-weight: 600;
+    margin-bottom: -10px;
+
+}
+
+.description :nth-child(2) {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: small;
+
+}
+
+.description button {
+    text-decoration: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    color: aliceblue;
+    background-color: green;
+    padding: 8px 20px 12px;
+    display: block;
+    width: 100%;
+    border: 1px solid green;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+
 
 .bg-modal {
     background-color: rgba(0, 0, 0, 0.8);
@@ -74,7 +119,7 @@ body {
 }
 
 .modal-contents {
-    height: 300px;
+    height: 320px;
     width: 500px;
     background-color: white;
     text-align: center;
@@ -84,9 +129,9 @@ body {
 }
 
 input {
-    margin: 12px auto;
+    margin: 8px auto;
     display: block;
-    width: 60%;
+    width: 70%;
     padding: 15px;
     font-size: 15px;
     border: 1px solid #bbbbbb;
@@ -122,7 +167,7 @@ input {
     background-color: #fdd31d;
     border: 1px solid #fdd31d;
     border-radius: 5px;
-    width: 58%;
+    width: 76%;
 }
 
 .popup-button:hover {
