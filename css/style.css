@@ -351,6 +351,11 @@ a:focus {
   animation-delay: .1s;
 }
 
+.client_img-box img {
+  border-radius: 20%;
+  height: 220px;
+  width: auto;
+}
 
 @keyframes beforeanimate {
   0% {
